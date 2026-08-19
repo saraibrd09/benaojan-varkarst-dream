@@ -1,6 +1,6 @@
 # Benaojan-Varkarst-Dream Calibration
 
-This repository documents the complete modelling workflow described in the accompanying Master's thesis (TFM), from raw input data to the final calibrated discharge simulation. Developed a semi-distributed hydrological model (VarKarst) calibrated with the DREAM_ZS algorithm for the
+This repository documents the complete modelling workflow described in the accompanying Master's thesis (TFM), from raw input data to the final calibrated discharge simulation. Developed a semi-distributed hydrological model (VarKarst) calibrated with the DREAM algorithm for the
 Benaoján karst spring (Sierra de Líbar, Málaga, Spain), developed as part of a Master's thesis
 (TFM) in Water Resources and Environment, Universidad de Málaga.
 
