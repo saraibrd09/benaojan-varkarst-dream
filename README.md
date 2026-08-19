@@ -1,6 +1,6 @@
 # Benaojan-Varkarst-Dream Calibration
 
-Developed a semi-distributed hydrological model (VarKarst) calibrated with the DREAM_ZS algorithm for the
+This repository documents the complete modelling workflow described in the accompanying Master's thesis (TFM), from raw input data to the final calibrated discharge simulation. Developed a semi-distributed hydrological model (VarKarst) calibrated with the DREAM_ZS algorithm for the
 Benaoján karst spring (Sierra de Líbar, Málaga, Spain), developed as part of a Master's thesis
 (TFM) in Water Resources and Environment, Universidad de Málaga.
 
@@ -18,6 +18,40 @@ Benaoján karst spring (Sierra de Líbar, Málaga, Spain), developed as part of 
 
 ### 1. Prepare input data
 
+Place `data_observed.csv` and `data_weather.csv` inside the `/data` folder.
+
+**`data_weather.csv`** — 4 columns:
+
+| Column | Description                                  |
+|--------|-----------------------------------------------|
+| `t`    | Date, in MATLAB datenum format (serial date)  |
+| `Prec` | Precipitation                                 |
+| `Temp` | Temperature                                   |
+| `PET`  | Potential evapotranspiration                  |
+
+**`data_observed.csv`** — 2 columns:
+
+| Column | Description                          |
+|--------|---------------------------------------|
+| `t`    | Date, in calendar format (dd.mm.yyyy) |
+| `Q`    | Observed discharge                    |
+
+> **Note on the `t` column format**: `data_weather.csv` must be in MATLAB datenum format 
+> because `varKarstKGE.m` uses it directly, unconverted, to match simulated and observed 
+> discharge dates via `ismember()`. `data_observed.csv` can remain in calendar date format 
+> because the script converts it internally with `datenum()` before the comparison. If 
+> `data_weather.csv` is not already in datenum format, the date-matching step would fail to 
+> find matches, causing the calibration to error out.
+
+
+
+Run `data_formatting.m` first. This converts both CSV files into the `.mat` structures required
+by the model:
+
+- `inputDataWeather.mat`
+- `obsData.mat`
+
+  
 Place `data_observed.csv` and `data_weather.csv` inside the `/data` folder.
 
 - `data_weather.csv`: column `t` must be in MATLAB datenum format (serial date number).
