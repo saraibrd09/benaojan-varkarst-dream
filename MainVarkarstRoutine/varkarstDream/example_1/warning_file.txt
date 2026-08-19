@@ -1,0 +1,3 @@
+-------------- DREAM_PACKAGE warning file --------------
+DREAM_PACKAGE PARALLEL: MATLAB pool opened with 4 workers for 8 chains 
+----------- End of DREAM_PACKAGE warning file ----------

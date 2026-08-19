@@ -1,0 +1,28 @@
+First of all, dataseries must be organized as required for Matlab [format, folders and data order (watch below)].
+
+1. Model (files involved -"runVK", "Thonthwaite.m", "varkarst.m", "inputDataWeather.mat", "obsData.mat"-):
+	a. Open "runVK.m"
+	b. Press "Run" button
+
+2. Calibration (files involved -"runDREAM_ZS.m", "varKarstKGE.m", "example_1.m", "runVK"-):
+	a. Open "varKarstKGE.m" and change the next parameters:
+		a.1. Line 6 = recharge area (just the first time)
+		a.2. Line 13 = set the address for the "inputDataWeather.mat" file (just the first time)
+		a.3. Line 35 = set the address for the "obsData.mat" file (just the first time)
+		a.4. Lines 40 & 41 = set the range for the calibration period
+	b. Open "example_1.m" and change the next parameters
+		b.1. Line 29 = set the address for the "example_1" FOLDER (just the first time)
+		b.2. Line 24 = set the number of generations for the different amount of iterations (min=3000)
+	c. Open "runDREAM_ZS
+	d. Press "Run" button
+
+3. Output data
+	a. Open the file "dream_zs_output.txt and find the calibrated parameters in the column "MAP"
+	b. Go back to "runVK.m" and replace the values from the parameters (1-7) for the calibrated ones 
+	c. Repeat step 1.b
+
+
+Data details:
+- I recomend creating the input data (.mat) from excel columns using a Matlab script to avoid incompatibilities with data series lengths.
+- The last date of the data in "obsData.mat" cannot exceed the last date of "inputDataWeather.mat".
+- A copy of "obsData.m" & "inputDataWeather.m" have to be in the same folders than "runVK.m" and "runDREAM_ZS".
