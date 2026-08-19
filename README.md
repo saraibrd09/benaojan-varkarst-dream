@@ -1,4 +1,3 @@
-# benaojan-varkarst-dream
 Benaoján VarKarst + DREAM_ZS Calibration
 
 Semi-distributed hydrological model (VarKarst) calibrated with the DREAM_ZS algorithm for the Benaoján karst spring (Sierra de Líbar, Málaga, Spain), developed as part of a Master's thesis (TFM) in Water Resources and Environment, Universidad de Málaga.
@@ -72,6 +71,11 @@ The model output (simulated vs. observed discharge) is generated from this final
 
 Data availability
 
+Precipitation and temperature were provided by the SAIH Hidrosur network. PET was calculated using Trasero 2.0 (Padilla & Delgado, 2014). Observed discharge data were provided by the Demarcación Hidrográfica de las Cuencas Mediterráneas Andaluzas (DHCMA).
+
+Citation
+
+If you use this code, please cite this thesis and the original VarKarst model: Hartmann et al. (2013).
 Precipitation and temperature were provided by the SAIH Hidrosur network. PET was calculated using Trasero 2.0 (Padilla & Delgado, 2014). Observed discharge data were provided by the Demarcación Hidrográfica de las Cuencas Mediterráneas Andaluzas (DHCMA).
 
 Citation
